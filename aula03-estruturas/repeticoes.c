@@ -26,5 +26,20 @@ int main(){
         i++;
     }
 
+
+    /*Estrutura DO WHILE*/
+    printf("\n\nEstrutura While:\n");
+
+    int i2 = 0;
+    int num3 = 5;
+
+    do{
+        int tabuada = i2 * num3;
+
+        printf("%i * %i = %i \n", num3, i2, tabuada);
+
+        i2++;
+    } while(i2 < 11); 
+
     return 0;
 }
