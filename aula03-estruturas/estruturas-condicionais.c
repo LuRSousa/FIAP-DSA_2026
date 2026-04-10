@@ -1,18 +1,41 @@
 #include<stdio.h>
 
 int main(){
-    float nota1 = 6.5;
-    float nota2 = 3.8;
-    float nota3 = 2.8;
+    printf("Calculadora de Media \n \n");
+    
+    float nota1, nota2, nota3;
+    int presenca;
+
+    /*
+        Especificadores Utilizados:
+        "%f" -> float
+        "%lf" -> double
+        "%d" ou "%i" -> int
+        "%c" -> char
+        "%s" -> string    
+    */
+
+    printf("Digite sua primeira nota: ");
+    scanf("%f", &nota1);
+    printf("Digite sua segunda nota: ");
+    scanf("%f", &nota2);
+    printf("Digite sua terceira nota: ");
+    scanf("%f", &nota3);
+    printf("Digite sua presenca (0 a 100): ");
+    scanf("%i", &presenca);
 
     float media = (nota1 + nota2 + nota3) / 3;
 
-    if(media < 4){
-        printf("Reprovado!");
-    } else if(media < 6){
+    printf("\nMedia: %.1f e Presenca: %i%%, o aluno esta: ", media, presenca);
+
+    if(media >= 6 && presenca >= 75){
+        printf("Aprovado!");
+    } else if(presenca < 75){
+        printf("Reprovado por falta!");
+    } else if(media >= 4){
         printf("Recuperacao!");
     } else{
-        printf("Aprovado!");
+        printf("Reprovado!");
     }
 
     return 0;
