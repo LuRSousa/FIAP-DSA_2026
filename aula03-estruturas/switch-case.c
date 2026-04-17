@@ -1,5 +1,10 @@
 #include<stdio.h>
 
+void menu(void){
+    printf("=== Sistema Escolar ===\n");
+    printf("Digite: \n 1: para calcular sua media \n 2: verificar presenca \n");
+}
+
 int main(){
     /*
         Interface do usuário com as opções:
@@ -9,13 +14,11 @@ int main(){
                                     presenca < 75% -> atentar com a presenca
     */
     
-    
     int opcao;
     float nota1, nota2, media;
     float presenca;
 
-    printf("=== Sistema Escolar ===\n");
-    printf("Digite: \n 1: para calcular sua media \n 2: verificar presenca \n");
+    menu();
     scanf("%d", &opcao);
 
     switch(opcao){
